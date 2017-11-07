@@ -3,33 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="d0184820c2133da0f9dc23cc1cfbece42eba8e35">
-        <dex dex="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_86ed4fd8de4e48428269e05b5f08c655ff338710\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\DaNN\.android\build-cache\a43679045e731c270f791a7c64d5d2148fe9e06c\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
-        <dex dex="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7cba25966d10356b1d7f537d2261e31235789071\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\DaNN\.android\build-cache\e6e2e02b84b48ca78b504f1a8a23324436f998ef\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
-        <dex dex="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_522d66ffd6759a9f2e74d12ce55394e23f3fee33\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -39,12 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\DaNN\.android\build-cache\6b3a69bd79a32d3ca1f3ed3ac07a83e0febfba51\output\jars\classes.jar"
+        jar="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
-        <dex dex="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26a88f9d968b6ffa1261c45ea2a00f3955bc3481\classes.dex" />
+        sha1="61ee7f48e5e7e0961bc8c488388d80ca8305105f">
+        <dex dex="C:\Users\DaNN\Documents\ITESO\11vo\PAP\Weeki_Git\Weeki\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_86ed4fd8de4e48428269e05b5f08c655ff338710\classes.dex" />
     </item>
 
 </items>

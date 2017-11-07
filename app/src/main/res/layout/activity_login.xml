@@ -6,66 +6,47 @@
     android:layout_height="match_parent"
     tools:context="com.example.alext.facebooklogintest.Login">
 
-    <LinearLayout
-        android:id="@+id/line1"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
-
-
-        <LinearLayout
-            android:id="@+id/line2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="100dp"
-            android:orientation="horizontal"
-            >
-
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/google_button"
-                android:layout_width="match_parent"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-
+                android:paddingTop="260dp"
+                android:layout_centerHorizontal="true"
                 tools:layout_editor_absoluteY="0dp"
                 tools:layout_editor_absoluteX="8dp">
             </com.google.android.gms.common.SignInButton>
 
             <com.facebook.login.widget.LoginButton
                 android:id="@+id/id_fb_login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
                 android:layout_centerInParent="true"
+                android:layout_below="@id/google_button"
                 android:layout_gravity="center_horizontal"
                 />
 
-
-        </LinearLayout>
-
         <Button
             android:id="@+id/button_skip"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
+            android:layout_below="@id/id_fb_login_button"
             android:text="Skip"
-            />
 
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:text="Login Status"
             android:id="@+id/id_text_view"
+            android:layout_below="@id/button_skip"
             android:gravity="center"
             android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="50dp"
             />
-
-    </LinearLayout>
 
 
 </RelativeLayout>

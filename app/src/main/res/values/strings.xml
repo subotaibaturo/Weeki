@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">facebookLoginTest</string>
+    <string name="app_name">Weeki</string>
     <string name="facebook_app_id">439663166434340</string>
     <string name="fb_login_protocol_scheme">fb439663166434340</string>
+    <string name="TAB1">Buscador</string>
+    <string name="TAB2">Listas</string>
+    <string name="TAB3">Eventos</string>
+    <string name="Logout">Cerrar Sesión</string>
 </resources>

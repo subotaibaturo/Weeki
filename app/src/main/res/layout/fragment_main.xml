@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alext.facebooklogintest.Menu_activity">
+    tools:context="com.example.alext.facebooklogintest.MenuItems.Menu_activity">
 
     <LinearLayout
         android:id="@+id/line1"
@@ -13,33 +13,70 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="MissingConstraints">
 
-
-        <TextView
-
-            android:text="User token is:"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-            />
-        <TextView
-            android:id="@+id/text_token"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:text="empty"
-            android:textSize="40dp"
-            />
-        <Button
-            android:id="@+id/button_logout"
-            android:layout_width="100dp"
-            android:layout_gravity="center_horizontal"
+        <android.support.v7.widget.SearchView
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout" />
+            android:id="@+id/searchview_menu"
+            android:layout_gravity="center_horizontal"
+            android:title="Search.."
+            app:actionViewClass="android.support.v7.widget.SearchView"
+            android:iconifiedByDefault="true"
+            app:showDividers="middle"
+            android:defaultFocusHighlightEnabled="true"
+            />
 
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            >
+
+            <Button
+                android:id="@+id/Button1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="40dp"
+                />
+            <Button
+                android:id="@+id/Button2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                />
+            <Button
+                android:id="@+id/Button3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                />
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Button4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="40dp"
+                />
+            <Button
+                android:id="@+id/Button5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                />
+            <Button
+                android:id="@+id/Button6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                />
+        </GridLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

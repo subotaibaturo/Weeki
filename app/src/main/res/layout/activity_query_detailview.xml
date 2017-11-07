@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MenuItems.Search.Query_DetailView"
+    tools:ignore="MergeRootFrame">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                android:id="@+id/image_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="pin"
+                />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/website_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DIRECCIÓN"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/textview_detail_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dirección"
+                            android:textSize="18dp"
+                            />
+                        <TextView
+                            android:id="@+id/textview_detail_Country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Country"
+                            android:textSize="18dp"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RATING"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20dp"
+                        />
+                    <TextView
+                        android:id="@+id/textview_detail_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="rating"
+                        android:textSize="18dp"
+                        />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CATEGORIA"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/textview_detail_Category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textSize="18dp"
+                        />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="STATUS"
+                        android:textSize="20dp"
+                        />
+                    <TextView
+                        android:id="@+id/textview_detail_isOpen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ISOPEN"
+                        android:textSize="18dp"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HORAS"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20dp"
+                        />
+                    <TextView
+                        android:id="@+id/textview_detail_times"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="time"
+                        android:textSize="18dp"
+                        />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_margin="@dimen/fab_dimen"
+        android:src="@android:drawable/stat_notify_chat"
+        app:layout_anchor="@+id/website_container"
+        app:layout_anchorGravity="top|end" />
+
+</android.support.design.widget.CoordinatorLayout>
+
