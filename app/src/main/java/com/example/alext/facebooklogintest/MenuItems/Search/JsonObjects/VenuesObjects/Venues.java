@@ -31,6 +31,13 @@ public class Venues {
     public Price price = null;
     public PhotoItems bestphoto=null;
 
+
+    public boolean hasBestohoto=false;
+    public boolean hasPhotos=false;
+
+    public boolean hasHours=false;
+    public boolean haspopular=false;
+
     public ArrayList<PhotoItems> listphotos = new ArrayList<>();
 
     public Hours hours = null;
@@ -92,6 +99,36 @@ public class Venues {
 
     }
 
+    public boolean isHasHours() {
+        return hasHours;
+    }
+
+    public void setHasHours(boolean hasHours) {
+        this.hasHours = hasHours;
+    }
+
+    public boolean isHaspopular() {
+        return haspopular;
+    }
+
+    public void setHaspopular(boolean haspopular) {
+        this.haspopular = haspopular;
+    }
+    public boolean isHasBestohoto() {
+        return hasBestohoto;
+    }
+
+    public void setHasBestohoto(boolean hasBestohoto) {
+        this.hasBestohoto = hasBestohoto;
+    }
+
+    public boolean isHasPhotos() {
+        return hasPhotos;
+    }
+
+    public void setHasPhotos(boolean hasPhotos) {
+        this.hasPhotos = hasPhotos;
+    }
     public ArrayList<PhotoItems> getPhotos() {
         return listphotos;
     }

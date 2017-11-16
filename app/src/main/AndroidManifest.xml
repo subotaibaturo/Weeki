@@ -29,6 +29,7 @@
         <activity android:name=".MenuItems.Search.Query_DetailView"
             android:label=""
             ></activity>
+        <activity android:name=".MenuItems.Search.ImageFull"></activity>
     </application>
 
     <meta-data android:name="com.facebook.sdk.ApplicationId"

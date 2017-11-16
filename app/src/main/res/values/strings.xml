@@ -6,4 +6,5 @@
     <string name="TAB2">Listas</string>
     <string name="TAB3">Eventos</string>
     <string name="Logout">Cerrar Sesión</string>
+    <string name="search_hint">¿Qué estás buscando?</string>
 </resources>

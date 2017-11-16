@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.alext.facebooklogintest.MenuItems.Menu_activity;
 import com.example.alext.facebooklogintest.MenuItems.Search.Adapters.RecyclerAdapter;
 import com.example.alext.facebooklogintest.MenuItems.Search.JsonObjects.ResponseApi;
 import com.example.alext.facebooklogintest.R;
@@ -82,7 +84,7 @@ public class Search_View extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(itemDecoration);
 
-        sendRequest(url+query+url2);
+        //sendRequest(url+query+url2);
     }
     public ArrayList<Venues> fetchJSON(String finaljson){
 
@@ -115,7 +117,9 @@ public class Search_View extends AppCompatActivity {
                 Log.d("QUERY", response.toString());
                 venues = fetchJSON(response.toString());
 
-
+                if(venues.size()==0){
+                    Toast.makeText(Search_View.this.getApplicationContext(),"Information NOT FOUND",Toast.LENGTH_SHORT).show();
+                }
                 setRecyclerAdapter();
 
 
@@ -128,7 +132,7 @@ public class Search_View extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(Search_View.this.getApplicationContext(),"Information NOT FOUND",Toast.LENGTH_SHORT).show();
             }
         });
         mrRequestQueue.add(stringRequest);
@@ -138,6 +142,7 @@ public class Search_View extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.m_search_view,menu);
         final MenuItem menuitem = menu.findItem(R.id.search_viewer);
+        menuitem.expandActionView();
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuitem);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -145,9 +150,11 @@ public class Search_View extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 //new JSONtask().execute(query);
                 Log.d("Prueba1",query);
+
                 String url1= url+query+url2;
                 //String url3="http://www.mocky.io/v2/5808a03a10000048004c6269";
-                sendRequest(url+query+url2);
+                String temp = url1.replaceAll(" ","%20");
+                sendRequest(temp);
 
 
                 return false;

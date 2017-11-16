@@ -6,4 +6,6 @@
     <color name="colorTabSelected">#7db9ff</color>
     <color name="colorWhiteTextTitle">#ffffff</color>
     <color name="colorSearchTEXT">#000000</color>
+    <color name="colorGreenStatus">#01ef35</color>
+    <color name="colorRedStatus">#ff0202</color>
 </resources>

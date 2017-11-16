@@ -50,6 +50,7 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
     private TextView texto;
     private Button query;
 
+    TextView tx;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +96,7 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
         });
         */
 
-        SearchView searchView = (SearchView) view.findViewById(R.id.searchview_menu);
+        /*SearchView searchView = (SearchView) view.findViewById(R.id.searchview_menu);
         EditText searchEditText = (EditText) searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
         searchEditText.setTextColor(getResources().getColor(R.color.colorSearchTEXT));
         searchEditText.setHintTextColor(getResources().getColor(R.color.colorAccent));
@@ -110,6 +111,14 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;
+            }
+        });
+        */
+        tx = (TextView) view.findViewById(R.id.search_TextView);
+        tx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView("");
             }
         });
 

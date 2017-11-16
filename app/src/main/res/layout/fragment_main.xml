@@ -14,8 +14,11 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:paddingTop="100dp"
+        >
 
+        <!--
         <android.support.v7.widget.SearchView
             android:paddingTop="20dp"
             android:layout_width="match_parent"
@@ -28,55 +31,95 @@
             app:showDividers="middle"
             android:defaultFocusHighlightEnabled="true"
             />
+            -->
 
-        <GridLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="50dp"
+            android:layout_height="40dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            android:paddingLeft="10dp"
             >
 
-            <Button
-                android:id="@+id/Button1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="40dp"
-                />
-            <Button
-                android:id="@+id/Button2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                />
-            <Button
-                android:id="@+id/Button3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                />
-        </GridLayout>
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/search_image"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_action_name"
+                    android:foregroundGravity="left"
+                    android:layout_centerVertical="true"
+                    />
 
-            <Button
-                android:id="@+id/Button4"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="40dp"
-                />
-            <Button
-                android:id="@+id/Button5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                />
-            <Button
-                android:id="@+id/Button6"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                />
-        </GridLayout>
+                <TextView
+                    android:id="@+id/search_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/search_hint"
+                    android:layout_toRightOf="@id/search_image"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="16dp"
+                    />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:layout_editor_absoluteX="8dp">
+
+                <Button
+                    android:id="@+id/Button1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                <Button
+                    android:id="@+id/Button2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <Button
+                    android:id="@+id/Button3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </GridLayout>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteY="8dp"
+                tools:layout_editor_absoluteX="8dp">
+
+                <Button
+                    android:id="@+id/Button4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                <Button
+                    android:id="@+id/Button5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <Button
+                    android:id="@+id/Button6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </GridLayout>
+
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
