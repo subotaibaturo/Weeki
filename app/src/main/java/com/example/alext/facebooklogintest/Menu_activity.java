@@ -29,6 +29,7 @@ public class Menu_activity extends AppCompatActivity{
     private void setupViewPager(ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new Tab1_Main_Buscador(),"Buscador");
+        adapter.addFragment(new Geolocation(),"Mapa");
         viewPager.setAdapter(adapter);
     }
 }
