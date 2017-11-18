@@ -111,7 +111,7 @@ public class Query_DetailView extends AppCompatActivity{
         textView_Category = (TextView) findViewById(R.id.textview_detail_Category);
         textView_IsOpen = (TextView) findViewById(R.id.textview_detail_isOpen);
         textView_openUntil =(TextView)findViewById(R.id.detail_openUntil);
-        textView_Rating = (TextView) findViewById(R.id.textview_detail_rating);
+       // textView_Rating = (TextView) findViewById(R.id.textview_detail_rating);
         //textView_hour = (TextView) findViewById(R.id.textview_detail_times);
         im = (ImageView) findViewById(R.id.image_detail);
         ratingBar = (RatingBar) findViewById(R.id.detail_ratingbar);
@@ -195,7 +195,7 @@ public void setItems(){
         Log.d("TEST","El address es: " + venueDetail.getLocationA().getAddress());
         textView_Country.setText(venueDetail.getLocationA().getCity()+" , "+venueDetail.getLocationA().getCountry());
         textView_Category.setText(venueDetail.getCategories().getName());
-        textView_Rating.setText(String.valueOf(venueDetail.getRating()));
+        //textView_Rating.setText(String.valueOf(venueDetail.getRating()));
         try {
             String q = venueDetail.getHours().getStatus();
             //String h = venueDetail.getHours().getTimeframes().get(0).getListrenderedtime().get(0).getRenderedtime();

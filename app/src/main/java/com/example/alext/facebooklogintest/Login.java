@@ -1,6 +1,8 @@
 package com.example.alext.facebooklogintest;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +53,7 @@ public class Login extends AppCompatActivity implements  View.OnClickListener , 
 
         signOut = (Button) findViewById(R.id.button_skip);
         googleSignin = (SignInButton) findViewById(R.id.google_button);
-
+        saveInfo();
         googleSignin.setOnClickListener(this);
         signOut.setOnClickListener(this);
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -148,7 +150,27 @@ public class Login extends AppCompatActivity implements  View.OnClickListener , 
 
     }
 
+    public void saveInfo(){
+        //crear
+        SharedPreferences sharedPref = getSharedPreferences("Settings", Context.MODE_PRIVATE);
 
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("radio","");
+        editor.putBoolean("Noradio",false);
+        editor.putString("longitud","");
+        editor.putString("latitud","");
+
+        editor.putString("button1","Desayuno");
+        editor.putString("button2","Bar");
+        editor.putString("button3","Cafe");
+        editor.putString("button4","Cenaduria");
+        editor.putString("button5","Italiana");
+        editor.putString("button6","Tacos");
+
+        editor.apply();
+
+
+    }
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 

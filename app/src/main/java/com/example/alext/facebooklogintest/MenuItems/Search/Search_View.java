@@ -60,7 +60,7 @@ public class Search_View extends AppCompatActivity {
 
     private ResponseApi responseApi;
     Context context;
-
+    boolean isEmpty;
     Bundle extra;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +71,10 @@ public class Search_View extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.new_toolbar);
         toolbar.setTitle("Weeki");
         setSupportActionBar(toolbar);
+        isEmpty=true;
 
-        String query = getIntent().getExtras().getString("query");
-        Log.d("QUERY","El query es: " + query);
+
+
         context =this;
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -84,7 +85,8 @@ public class Search_View extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(itemDecoration);
 
-        //sendRequest(url+query+url2);
+
+
     }
     public ArrayList<Venues> fetchJSON(String finaljson){
 
@@ -109,7 +111,8 @@ public class Search_View extends AppCompatActivity {
 
     private void sendRequest(String query){
        mrRequestQueue = Volley.newRequestQueue(this);
-        stringRequest = new StringRequest(Request.Method.GET,query, new Response.Listener<String>() {
+        String temp = query.replaceAll(" ","%20");
+        stringRequest = new StringRequest(Request.Method.GET,temp, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 //result.setText(response.toString());
@@ -141,8 +144,20 @@ public class Search_View extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.m_search_view,menu);
+
+        mquery = getIntent().getExtras().getString("query");
+        isEmpty=getIntent().getExtras().getBoolean("isempty");
         final MenuItem menuitem = menu.findItem(R.id.search_viewer);
-        menuitem.expandActionView();
+        Log.d("QUERY","El query es: " + mquery);
+        //if(mquery=="-")
+
+
+        if(isEmpty==false){
+            sendRequest(url+mquery+url2);
+        }
+        else
+            menuitem.expandActionView();
+
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuitem);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -153,8 +168,8 @@ public class Search_View extends AppCompatActivity {
 
                 String url1= url+query+url2;
                 //String url3="http://www.mocky.io/v2/5808a03a10000048004c6269";
-                String temp = url1.replaceAll(" ","%20");
-                sendRequest(temp);
+
+                sendRequest(url1);
 
 
                 return false;

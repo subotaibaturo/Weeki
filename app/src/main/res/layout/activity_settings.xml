@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/Settings_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    >
+
+</android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="clip_vertical"
+        >
+        <TextView
+            android:id="@+id/Settings_switch_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Cerca de mi ubicación"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            />
+        <Switch
+            android:id="@+id/Settings_switch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="30dp"
+            />
+
+            <View
+                android:id="@+id/sep1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cardview_shadow_start_color"
+                android:layout_below="@id/Settings_switch_text"
+                />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Settings_radio_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:text="Radio"
+
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/Setting_radio_res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Settings_radio_text"
+            android:paddingTop="10dp"
+            android:paddingLeft="22dp"
+
+            android:text="0 m" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <View
+            android:id="@+id/sep2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_radio_text"
+            android:background="@color/cardview_shadow_start_color"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/Settings_Button1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botón 1: "
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="30dp"
+            />
+        <TextView
+            android:id="@+id/Settings_Button1_res"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Res1"
+            android:layout_toRightOf="@id/Settings_Button1_text"
+            />
+
+        <Button
+            android:id="@+id/Settings_Button1_action"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="15dp"
+            />
+        <View
+            android:id="@+id/sep3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_Button1_action"
+            android:background="@color/cardview_shadow_start_color"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/Settings_Button2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botón 2: "
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="30dp"
+            />
+        <TextView
+            android:id="@+id/Settings_Button2_res"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Res2"
+            android:layout_toRightOf="@id/Settings_Button2_text"
+            />
+
+        <Button
+            android:id="@+id/Settings_Button2_action"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="15dp"
+            />
+        <View
+            android:id="@+id/sep4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_Button2_action"
+            android:background="@color/cardview_shadow_start_color"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/Settings_Button3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botón 3: "
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="30dp"
+            />
+        <TextView
+            android:id="@+id/Settings_Button3_res"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Res3"
+            android:layout_toRightOf="@id/Settings_Button3_text"
+            />
+
+        <Button
+            android:id="@+id/Settings_Button3_action"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="15dp"
+            />
+        <View
+            android:id="@+id/sep5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_Button3_action"
+            android:background="@color/cardview_shadow_start_color"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/Settings_Button4_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botón 4: "
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="30dp"
+            />
+        <TextView
+            android:id="@+id/Settings_Button4_res"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Res4"
+            android:layout_toRightOf="@id/Settings_Button4_text"
+            />
+
+        <Button
+            android:id="@+id/Settings_Button4_action"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="15dp"
+            />
+        <View
+            android:id="@+id/sep6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_Button4_action"
+            android:background="@color/cardview_shadow_start_color"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/Settings_Button5_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botón 5: "
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="30dp"
+            />
+        <TextView
+            android:id="@+id/Settings_Button5_res"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Res1"
+            android:layout_toRightOf="@id/Settings_Button5_text"
+            />
+
+        <Button
+            android:id="@+id/Settings_Button5_action"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="15dp"
+            />
+        <View
+            android:id="@+id/sep7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_Button5_action"
+            android:background="@color/cardview_shadow_start_color"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/Settings_Button6_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botón 6: "
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="30dp"
+            />
+        <TextView
+            android:id="@+id/Settings_Button6_res"
+            android:layout_marginTop="15dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Res1"
+            android:layout_toRightOf="@id/Settings_Button6_text"
+            />
+
+        <Button
+            android:id="@+id/Settings_Button6_action"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="15dp"
+            />
+        <View
+            android:id="@+id/sep8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Settings_Button6_action"
+            android:background="@color/cardview_shadow_start_color"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

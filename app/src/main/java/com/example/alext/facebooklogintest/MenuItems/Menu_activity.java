@@ -85,7 +85,11 @@ public class Menu_activity extends AppCompatActivity{
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_Settings){
+        if(item.getItemId()==R.id.action_Settings){
+            Intent intent = new Intent(this, Settings_View.class);
+            startActivity(intent);
+        }
+        if(item.getItemId() == R.id.action_logout){
 
 
             if(Facebooklogin==true && Googlelogin ==false){

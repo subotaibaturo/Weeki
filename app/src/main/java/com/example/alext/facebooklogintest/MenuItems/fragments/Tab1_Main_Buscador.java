@@ -1,6 +1,8 @@
 package com.example.alext.facebooklogintest.MenuItems.fragments;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -50,9 +52,13 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
     private TextView texto;
     private Button query;
 
+    private Button b1,b2,b3,b4,b5,b6;
+
+    String name1,name2, name3,  name4, name5, name6;
+
     TextView tx;
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
@@ -60,7 +66,7 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View view =inflater.inflate(R.layout.fragment_main,container,false);
         //revoke = (Button) view.findViewById(R.id.button_revoke);
@@ -144,6 +150,51 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
         });
         */
 
+        b1 = (Button) view.findViewById(R.id.Button1);
+        b2 = (Button) view.findViewById(R.id.Button2);
+        b3 = (Button) view.findViewById(R.id.Button3);
+        b4 = (Button) view.findViewById(R.id.Button4);
+        b5 = (Button) view.findViewById(R.id.Button5);
+        b6 = (Button) view.findViewById(R.id.Button6);
+        getinfo();
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView(name1);
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView(name2);
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView(name3);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView(name4);
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView(name5);
+            }
+        });
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSearchView(name6);
+            }
+        });
+
         return view;
     }
 
@@ -154,8 +205,14 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
     }
 
     public void goSearchView(String query){
+        boolean isEmpty=true;
         Intent intent = new Intent(getActivity(), Search_View.class);
+        if(query=="")
+            isEmpty=true;
+        else
+            isEmpty=false;
         intent.putExtra("query",query);
+        intent.putExtra("isempty",isEmpty);
         startActivity(intent);
     }
 
@@ -221,6 +278,25 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
                     Toast.makeText(getActivity().getApplicationContext(),"Error revoke access", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    public void getinfo(){
+
+        SharedPreferences sharedPref =  this.getActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE);
+         name1 = sharedPref.getString("button1",""); //el segundo parametro es un default
+         name2 = sharedPref.getString("button2","");
+         name3 = sharedPref.getString("button3","");
+         name4 = sharedPref.getString("button4","");
+         name5 = sharedPref.getString("button5","");
+         name6 = sharedPref.getString("button6","");
+
+        Log.d("TEST","valor de : " + name1);
+
+        b1.setText(name1);
+        b2.setText(name2);
+        b3.setText(name3);
+        b4.setText(name4);
+        b5.setText(name5);
+        b6.setText(name6);
     }
 
     @Override
