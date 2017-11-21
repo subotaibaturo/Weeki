@@ -7,4 +7,5 @@
     <string name="TAB3">Eventos</string>
     <string name="Logout">Cerrar Sesión</string>
     <string name="search_hint">¿Qué estás buscando?</string>
+    <string name="google_maps_API_key">AIzaSyDXmUP6Ptf70eZzU7J9LTUFzSo1Vdp6Xpw</string>
 </resources>

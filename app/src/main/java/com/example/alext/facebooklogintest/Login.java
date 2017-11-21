@@ -26,6 +26,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.Task;
 
 public class Login extends AppCompatActivity implements  View.OnClickListener , GoogleApiClient.OnConnectionFailedListener{
 
@@ -39,6 +42,9 @@ public class Login extends AppCompatActivity implements  View.OnClickListener , 
     private GoogleApiClient googleApiClient;
     private static final int REQ_CODE = 9001;
     private String not_log_in ="Conectiong Error ";
+
+    FusedLocationProviderClient locs;
+    private Boolean mLocationPermissionsGranted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,9 @@ public class Login extends AppCompatActivity implements  View.OnClickListener , 
         signOut.setOnClickListener(this);
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
+
+        locs =  LocationServices.getFusedLocationProviderClient(this);
+        //Task location = locs.getLastLocation();
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -155,7 +164,8 @@ public class Login extends AppCompatActivity implements  View.OnClickListener , 
         SharedPreferences sharedPref = getSharedPreferences("Settings", Context.MODE_PRIVATE);
 
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("radio","");
+        editor.putInt("radio",250);
+        //editor.putString("radio","");
         editor.putBoolean("Noradio",false);
         editor.putString("longitud","");
         editor.putString("latitud","");

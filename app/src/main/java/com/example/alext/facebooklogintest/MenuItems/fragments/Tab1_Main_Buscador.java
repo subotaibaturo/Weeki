@@ -303,4 +303,11 @@ public class Tab1_Main_Buscador extends Fragment implements GoogleApiClient.OnCo
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+    @Override
+    public void onResume() {
+
+        getinfo();
+        super.onResume();
+    }
 }

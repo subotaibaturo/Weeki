@@ -20,6 +20,9 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+        maven{
+            url "https://maven.google.com"      //Nos permite utilizar Google Play Services
+        }
     }
 }
 

@@ -168,5 +168,9 @@ public class Menu_activity extends AppCompatActivity{
         return false;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
 
